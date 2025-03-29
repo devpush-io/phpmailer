@@ -12,14 +12,14 @@ $mail->isSMTP();
 
 // Add SMTP server details - Copy over user details from SMTP service (MailSend)
 $mail->SMTPAuth   = true;
-$mail->Host       = 'smtp.mailersend.net';
-$mail->Username   = '';
-$mail->Password   = '';
+$mail->Host       = '[ENTER SMTP SERVICE HOST]';
+$mail->Username   = '[ENTER SMTP SERVICE USERNAME]';
+$mail->Password   = '[ENTER SMTP SERVICE PASSWORD]';
 $mail->Port       = 587;
 
 // Set E-mail content
-$mail->setFrom('', 'MailSend');
-$mail->addAddress('', 'Your Name');
+$mail->setFrom('[ENTER SMTP SERVICE E-MAIL]', 'MailSend');
+$mail->addAddress('[ENTER YOUR E-MAIL]', 'Your Name');
 $mail->isHTML(true);
 $mail->Subject = 'PHPMailer Test Email';
 $mail->Body    = 'This is a test <b>E-mail!</b>';
